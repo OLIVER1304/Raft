@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update</title>
+    <!-- <link rel="stylesheet" href="/public/css/write.css"> -->
+    <link rel="stylesheet" href="../public/css/write.css">
+</head>
+
+<body>
+    <div class="squaer">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="circle">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="top">
+        <div class="top_title">
+            <a href="/">首页</a>
+        </div>
+        <div class="top_title">
+            <a href="/write">发表</a>
+        </div>
+        <div class="write">
+            <p>修改</p>
+        </div>
+    </div>
+    <hr>
+    <div class="user_w">
+        <form action="/doupdate" method="POST">
+            <div class="textarea">
+                <input type="hidden" value="{{meseges.id}}" name="id">
+                <p>标题</p>
+                <input type="text" name="title" value="{{meseges.title}}">
+                <p>内容</p>
+                <textarea name="content" id="" cols="30" rows="20">{{meseges.content}}</textarea>
+                <button type="submit">发表</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

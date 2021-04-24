@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便筏</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="../public/js/search.js"></script>
+    <!-- <link rel="stylesheet" href="./write.html"> -->
+</head>
+
+<body>
+    <div class="squaer">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="circle">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="top">
+        <div class="top_title">
+            <p>首页</p>
+        </div>
+        <div class="write">
+            <a href="/write">发表</a>
+        </div>
+    </div>
+    <hr>
+    <div class="content">
+        <div class="search_p">
+            <input type="text" class="search" id="myInput" onkeyup="myFunction()">
+            <i class="fa fa-search fa-2x sp"></i>
+        </div>
+        <ul id="content" class="list">
+            {{each meseges}}
+            <li>
+                <a href="/delete?id={{$value.id}}" class="delete">X</a>
+                <div class="nr">
+                    <p id="title" class="title">{{$value.title}}</p>
+                    <p id="content">{{$value.content}}</p>
+                </div>
+                <a href="/update?id={{$value.id}}" class="update">
+                    <i class="fa fa-ellipsis-h"></i>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+
+</html>
